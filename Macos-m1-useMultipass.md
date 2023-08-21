@@ -2,7 +2,7 @@
 
 背景: Mac m1平时测试验证会有linux 虚拟机下操作的需求，但是virtualbox vmware 对m1的支持有限。
 
-multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
+multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机。然后我们可以基于虚拟机做各种各样的测试
 
 
 
@@ -29,6 +29,30 @@ multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
    然后一路点击continue 即可安装。
 
    如需卸载: `sudo sh "/Library/Application Support/com.canonical.multipass/uninstall.sh" `
+
+
+
+3. multipass常用命令
+
+   `multipass list` 查看当前有多少个虚拟机
+
+   ![image-20230821204131609](./assets/image-20230821204131609.png)
+
+   `multipass info ubuntu2204` 查看指定虚拟机的信息
+
+   ![image-20230821204249720](./assets/image-20230821204249720.png)
+
+   `multipass find` 查找可用的OS镜像
+
+   ![image-20230821204608887](./assets/image-20230821204608887.png)
+
+   `multipass launch --name vm5 22.04` 创建虚拟机
+
+   ![image-20230821204842708](./assets/image-20230821204842708.png)
+
+   `multipass shell vm5` 登录虚拟机
+
+   ![image-20230821204943871](./assets/image-20230821204943871.png)
 
 ---
 
