@@ -8,7 +8,33 @@ multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
 
 ---
 
-### 二: 创建虚拟机报错
+### 二: 如何安装Multipass
+
+有多种安装方式，由于本人是mac os，所以只针对macos的进行说明。（windows/linux 均支持）
+
+1. 直接使用macos的包管理工具brew 进行安装
+
+   `brew install --cask multipass` 即可
+
+   如果需要卸载的话 可以使用: `brew uninstall multipass`
+
+   
+
+   
+
+2. 或者可以安装包进行安装
+
+   安装包地址参考github官网: https://github.com/canonical/multipass/releases/
+
+   然后一路点击continue 即可安装。
+
+   如需卸载: `sudo sh "/Library/Application Support/com.canonical.multipass/uninstall.sh" `
+
+---
+
+
+
+### 三: 创建虚拟机报错
 
 1. `launch failed: Downloaded image hash does not match `
 
@@ -48,7 +74,7 @@ multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
 
 ---
 
-### 三: 走代理创建虚拟机
+### 四: 走代理创建虚拟机
 
 实在没招，通过代理的方式进行ubuntu的方式进行安装
 
@@ -60,7 +86,7 @@ multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
 
 ---
 
-### 四: 创建好的虚拟机设置ssh登录
+### 五: 创建好的虚拟机设置ssh登录
 
 如果需要登录虚拟机，提供两种登录方式
 
@@ -90,34 +116,6 @@ multipass 是ubuntu 开源的工具可以在macm1 下快速启动虚拟机
    然后本地ssh 测试:
 
    ![image-20230818195604027](./assets/image-20230818195604027.png)
-
----
-
-
-
-### 五: 如何安装multipaas
-
-有那种安装方式，由于本人是mac os，所以只针对macos的进行说明
-
-1.  直接使用macos的包管理工具brew 进行安装
-
-   `brew install --cask multipass` 即可
-
-   如果需要卸载的话 可以使用: `brew uninstall multipass`
-
-   
-
-   
-
-   
-
-2. 或者可以安装包进行安装
-
-   安装包地址参考github官网: https://github.com/canonical/multipass/releases/
-
-   然后一路点击continue 即可安装。
-
-   如需卸载: `sudo sh "/Library/Application Support/com.canonical.multipass/uninstall.sh" `
 
 
 
