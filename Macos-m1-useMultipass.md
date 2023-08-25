@@ -201,5 +201,52 @@ Vscode 通过remote-ssh 插件参与远程项目的调试，非常方便
 
 
 
+---
+
+### 七: 使用multipass安装docker虚拟机
+
+1. 安装命令 
+
+   `multipass launch -c 2 -m 4G -d 40G -n vmdocker docker`
+
+   ```bash
+   image » multipass launch -c 2 -m 4G -d 40G -n vmdocker docker                                                                                                                  
+   You'll need to add this to your shell configuration (.bashrc, .zshrc or so) for
+   aliases to work without prefixing with `multipass`:
+   
+   PATH="$PATH:/Users/hufei/Library/Application Support/multipass/bin"
+   Mounted '/Users/hufei/multipass/vmdocker' into 'vmdocker:vmdocker'
+   ```
+
+   ![image-20230825125734218](./assets/image-20230825125734218.png)
+
+   安装成功，此时该虚拟机vmdokcer，带有docker客户端和portainer
+
+   
+
+   ![image-20230825130124352](./assets/image-20230825130124352.png)
+
+2. 使用alias创建别名
+
+   ```bash
+   alias multipass docker:docker
+   PATH="$PATH:/Users/hufei/Library/Application Support/multipass/bin"
+   ```
 
 
+
+3. 直接主机上使用docker命令
+
+   因为创建了alias，所以可以在主机上直接使用docker命令
+
+   ![image-20230825130417140](./assets/image-20230825130417140.png)
+
+   
+
+4. 访问portainer UI
+
+   默认安装了portainer(没怎么用过),端口是9000。浏览器访问主机IP:9090
+
+   ![image-20230825154147538](./assets/image-20230825154147538.png)
+
+   类似于一个docker的 管理界面 
